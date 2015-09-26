@@ -4,7 +4,7 @@
     <hr/>
 
     {!! Form::open(['action' => 'TournamentsController@store']) !!}
-    @include('tournaments.form', ['submitButtonText' => 'Add Tournament'])
+    @include('tournaments.createForm', ['submitButtonText' => 'Add Tournament'])
     {!! Form::close() !!}
 
 @stop

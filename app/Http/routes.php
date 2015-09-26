@@ -24,6 +24,7 @@ Route::get('tournaments/create', 'TournamentsController@create');
 Route::post('tournaments', 'TournamentsController@store');
 Route::get('tournaments', 'TournamentsController@index');
 Route::get('tournaments/{id}', 'TournamentsController@show');
+Route::get('tournaments/search', 'TournamentsController@showSearch');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');

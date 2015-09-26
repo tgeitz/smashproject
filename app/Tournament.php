@@ -12,12 +12,6 @@ Class Tournament extends Model {
 
     public function users()
     {
-        $this->doStuff();
         return $this->belongsTo('App\User');
-    }
-
-    private function doStuff()
-    {
-        return true;
     }
 }

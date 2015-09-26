@@ -37,4 +37,8 @@ class TournamentsController extends Controller {
         $tournament = Auth::user()->tournaments()->create($request->all());
         return redirect('tournaments/'.$tournament->id);
     }
+    public function showSearch()
+    {
+        return view(tournaments.search);
+    }
 }
