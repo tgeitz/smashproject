@@ -34,13 +34,7 @@ class TournamentsController extends Controller {
 
     public function store(TournamentRequest $request)
     {
-        $this->createTournament($request);
-        return redirect('user/dashboard');
-    }
-
-    private function createTournament(TournamentRequest $request)
-    {
         $tournament = Auth::user()->tournaments()->create($request->all());
-        return $tournament;
+        return redirect('tournaments/'.$tournament->id);
     }
 }
